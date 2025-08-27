@@ -384,3 +384,28 @@ def demonstrate_observer_pattern():
     
     news_agency.set_news("Breaking: Python 4.0 Released!")
     news_agency.set_news("Update: New metaclass features added")
+    
+def demonstrate_factory_pattern():
+    """Demonstrate factory design pattern."""
+    print("\n=== Factory Pattern Demo ===")
+    
+    vehicle_types = [VehicleType.CAR, VehicleType.MOTORCYCLE, VehicleType.TRUCK]
+    
+    for vehicle_type in vehicle_types:
+        vehicle = VehicleFactory.create_vehicle(vehicle_type)
+        print(f"\n{vehicle_type.name}:")
+        print(f"  {vehicle.get_info()}")
+        print(f"  {vehicle.start_engine()}")
+
+def main():
+    """Main demonstration function."""
+    print("=== Python Metaclasses and Advanced OOP Demo ===")
+    
+    demonstrate_metaclasses()
+    demonstrate_abstract_classes()
+    demonstrate_multiple_inheritance()
+    demonstrate_observer_pattern()
+    demonstrate_factory_pattern()
+
+if __name__ == "__main__":
+    main()
